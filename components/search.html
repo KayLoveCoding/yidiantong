@@ -1,0 +1,127 @@
+<div id="searchBox" class="pc-nav">
+	<div class="container">
+		<div class="flex-b align-center w-100">
+			<div class="search-box flex-b align-center">
+				<div class="flex align-center f1">
+					<div class="search-item-box">
+						<div class="search-item flex-b align-center" style="width: 97px;" onclick="toggleSelect(this)">
+							<span id="select1">不限游戏区</span>
+							<span class="glyphicon glyphicon-chevron-down arrow"></span>
+						</div>
+						<div class="option-list hidden" style="width: 120px;">
+							<div class="option-item" onclick="getOption(this.innerText,'#select1','#queryPart')">不限游戏区
+							</div>
+							<div class="option-item" onclick="getOption(this.innerText,'#select1','#queryPart')">笑傲江湖
+							</div>
+							<div class="option-item" onclick="getOption(this.innerText,'#select1','#queryPart')">海纳百川
+							</div>
+							<div class="option-item" onclick="getOption(this.innerText,'#select1','#queryPart')">金戈铁马
+							</div>
+						</div>
+					</div>
+					<div class="line"></div>
+					<div class="search-item-box">
+						<div class="search-item flex-b align-center" style="width: 55px;" onclick="toggleSelect(this)">
+							<span id="select2">角色</span>
+							<span class="glyphicon glyphicon-chevron-down arrow"></span>
+						</div>
+						<div class="option-list hidden" style="width: 80px;">
+							<div class="option-item" onclick="toggleJueseSelect(this.innerText,'#select2','#queryPart','#innerOptional',true)">角色
+							</div>
+							<div class="option-item" onclick="toggleJueseSelect(this.innerText,'#select2','#queryPart','#innerOptional',false)">货币
+							</div>
+						</div>
+					</div>
+					<div class="line"></div>
+					<input type="text" placeholder="请输入关键词">
+				</div>
+				<div class="flex-e align-center">
+					<div class="search-btn flex-c align-center">搜索</div>
+				</div>
+			</div>
+			<div class="flex-e align-center kefu">
+				<div class="icon-box">
+					<div class="icon"></div>
+				</div>
+				在线客服
+			</div>
+		</div>
+	</div>
+	<div class="container hidden animate__animated animate__fadeIn" id="queryPart">
+		<div class="query-box" id="queryBox">
+			<div class="header flex-b align-center">
+				<div class="brand-box" style="margin-top: 0;">
+					<div class="brand">条件筛选</div>
+					<div class="sub">可多选</div>
+				</div>
+				<div class="flex-e align-center">
+					<div class="reset-btn" style="margin-right: 8px;">重置</div>
+					<div class="search-btn">搜索</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="flex align-center item">
+					<div class="name">游戏大区</div>
+					<div class="select-box" style="width: 366px;margin-top: 8px;">
+						<div class="w-100 flex-b" onclick="toggleSelect(this)">
+							<div class="select-value f1">
+								<span id="layerSelect1Web">不限游戏区</span>
+								<div class="arrow"></div>
+							</div>
+						</div>
+						<div class="option-list hidden">
+							<div class="option-item" onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')">不限游戏区
+							</div>
+							<div class="option-item" onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')">笑傲江湖
+							</div>
+							<div class="option-item" onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')">海纳百川
+							</div>
+							<div class="option-item" onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')">金戈铁马
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="outerOptional">
+					<div id="innerOptional">
+						<div class="flex align-center item">
+							<div class="name">职业</div>
+							<div class="flex align-center multi-selection" id="multiSelection">
+								<div class="tag" onclick="toggleMulti(this,'#multiSelection')">战士</div>
+								<div class="tag" onclick="toggleMulti(this,'#multiSelection')">道士</div>
+								<div class="tag" onclick="toggleMulti(this,'#multiSelection')">魔法师</div>
+								<div class="tag" onclick="toggleMulti(this,'#multiSelection')">射手</div>
+								<div class="tag" onclick="toggleMulti(this,'#multiSelection')">枪手</div>
+							</div>
+						</div>
+						<div class="flex align-center item">
+							<div class="name">性别</div>
+							<div class="flex align-center multi-selection">
+								<div class="tag" onclick="toggleSingle(this,'tag')">男</div>
+								<div class="tag" onclick="toggleSingle(this,'tag')">女</div>
+							</div>
+						</div>
+						<div class="flex align-center item">
+							<div class="name">等级区间(级)</div>
+							<div class="flex-b align-center price-box-wrapper">
+								<div class="price-item"><input type="number" placeholder="自定最低等级"></div>
+								<span>-</span>
+								<div class="price-item"><input type="number" placeholder="自定最高等级"></div>
+							</div>
+						</div>
+					</div>
+					<div class="flex align-center item">
+						<div class="name">价格区间(元)</div>
+						<div class="flex-b align-center price-box-wrapper">
+							<div class="price-item"><input type="number" placeholder="自定最低价格"></div>
+							<span>-</span>
+							<div class="price-item"><input type="number" placeholder="自定最高价格"></div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,100 @@
+.footer-comp{
+	height: 144px;
+	background: linear-gradient(89deg, #1E3C72 0%, #2A5298 100%);
+	.grid-4{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.item{
+		display: flex;
+		align-items: center;
+		.icon{
+			width: 42px;
+			height: 42px;
+			margin-right: 20px;
+			
+		}
+		.name{
+			font-size: 20px;
+			font-family: PingFang SC-Medium, PingFang SC;
+			font-weight: 500;
+			color: #FFFFFF;
+		}
+		.sub{
+			font-size: 14px;
+			font-family: PingFang SC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #FFFFFF;
+			margin-top: 4px;
+		}
+		&:nth-child(1){
+			.icon{
+				background: url(../img/btm1.png) no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+		}
+		&:nth-child(2){
+			.icon{
+				background: url(../img/btm2.png) no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+		}
+		&:nth-child(3){
+			.icon{
+				background: url(../img/btm3.png) no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+		}
+		&:nth-child(4){
+			.icon{
+				background: url(../img/btm4.png) no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+		}
+	}
+
+	
+
+}
+.btm-box{
+	height: 54px;
+	background: #1A1D1E;
+	span{
+		font-size: 14px;
+		font-family: PingFang SC-Regular, PingFang SC;
+		font-weight: 400;
+		color: rgba(255, 255, 255, 0.4);
+	}
+}
+@media screen and (max-width: 992px){
+	.footer-comp{
+		height: auto;
+		box-sizing: border-box;
+		padding: 30px;
+		.grid-4{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.item{
+			margin-bottom: 30px;
+		}
+	}
+}
+@media screen and (max-width: 768px){
+	.footer-comp{
+		height: auto;
+		box-sizing: border-box;
+		padding: 30px;
+		.grid-4{
+			display: grid;
+			grid-template-columns: 100%;
+		}
+		.item{
+			margin-bottom: 30px;
+		}
+	}
+}

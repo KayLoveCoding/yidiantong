@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta
+            name="report"
+            content='{"spm":"1001.2101","extra":{"titAb":"new"},"pid":"blog"}'
+        />
+        <meta name="applicable-device" content="mobile" />
+        <meta http-equiv="Cache-Control" content="no-transform" />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="telephone=no" name="format-detection" />
+        <meta content="email=no" name="format-detection" />
+        <meta name="referrer" content="always" />
+        <title></title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/animate.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="css/roleDetail.css" />
+    </head>
+    <body>
+        <div id="roleDetail" class="page">
+            <div id="header">
+                <div class="pc-nav">
+                    <header class="header-comp">
+                        <div class="container h-100">
+                            <div class="flex-b align-center h-100">
+                                <div class="left flex align-center h-100">
+                                    <div
+                                        class="logo pointer"
+                                        onclick="toHome()"
+                                    ></div>
+                                    <div
+                                        class="menu-list f1 flex-a align-center"
+                                    >
+                                        <div
+                                            class="menu-item pointer"
+                                            data-path="index"
+                                            onclick="toPage('index')"
+                                        >
+                                            <span
+                                                >首页<span class="line"></span
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="menu-item pointer"
+                                            data-path="role"
+                                            onclick="toPage('role')"
+                                        >
+                                            <span
+                                                >角色<span class="line"></span
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="menu-item pointer"
+                                            data-path="lingfu"
+                                            onclick="toPage('lingfu')"
+                                        >
+                                            <span
+                                                >灵符<span class="line"></span
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="menu-item pointer"
+                                            data-path="jingangshi"
+                                            onclick="toPage('jingangshi')"
+                                        >
+                                            <span
+                                                >金刚石<span class="line"></span
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="menu-item pointer"
+                                            data-path="card"
+                                            onclick="toPage('card')"
+                                        >
+                                            <span
+                                                >秒卡<span class="line"></span
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="menu-item pointer"
+                                            data-path="yuanbao"
+                                            onclick="toPage('yuanbao')"
+                                        >
+                                            <span
+                                                >元宝<span class="line"></span
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="menu-item pointer"
+                                            data-path="jinbi"
+                                            onclick="toPage('jinbi')"
+                                        >
+                                            <span
+                                                >金币<span class="line"></span
+                                            ></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right flex-e align-center h-100">
+                                    <div
+                                        class="info-item pointer"
+                                        onclick="toPage('me')"
+                                    >
+                                        <img
+                                            src="./img/me.png"
+                                            alt=""
+                                            class="icon"
+                                        />
+                                        我的
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="info-item pointer">
+                                        <img
+                                            src="./img/txz.png"
+                                            alt=""
+                                            class="icon"
+                                        />
+                                        通行证
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="quick-charge pointer">
+                                        立即充值
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="info">您好，72222223</div>
+                                    <div class="logout">退出</div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+
+                <div class="m-nav">
+                    <header class="m-header-comp">
+                        <div class="flex-b">
+                            <div class="left logo no-shrink"></div>
+                            <div class="middle f1">
+                                <div
+                                    class="search-box flex align-center"
+                                    style="display: none"
+                                >
+                                    <div class="icon"></div>
+                                    <input
+                                        type="text"
+                                        placeholder="请输入关键词"
+                                    />
+                                    <div class="header-search-btn">搜索</div>
+                                </div>
+                            </div>
+                            <div class="right flex-e no-shrink align-center">
+                                <div class="kefu">
+                                    <div class="img"></div>
+                                </div>
+
+                                <div
+                                    class="m-menu"
+                                    onclick="toggleMMenu(true)"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="m-search-box m-nav">
+                            <div class="container">
+                                <div class="grid-2">
+                                    <div
+                                        class="flex-c align-center m-search-item"
+                                        onclick="toggleLayer('#layer1',true)"
+                                    >
+                                        <span id="mSelect1">不限游戏区</span>
+                                        <span class="arrow"></span>
+                                    </div>
+                                    <div
+                                        class="flex-c align-center m-search-item"
+                                        onclick="toggleLayer('#layer2',true)"
+                                    >
+                                        <span id="mSelect2">角色</span>
+                                        <span class="arrow"></span>
+                                    </div>
+                                </div>
+                                <div class="search-box flex align-center">
+                                    <div class="icon"></div>
+                                    <input
+                                        type="text"
+                                        placeholder="请输入关键词"
+                                    />
+                                    <div class="header-search-btn">搜索</div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="layer-box hidden" id="layer1">
+                        <div
+                            class="content-box flex-v flex-b animate__animated animate__fadeInUp"
+                        >
+                            <div>
+                                <div class="flex-b align-center">
+                                    <div class="flex align-center">
+                                        <div class="brand">条件筛选</div>
+                                        <div class="sub">可多选</div>
+                                    </div>
+                                    <div
+                                        class="close"
+                                        onclick="toggleLayer('#layer1',false)"
+                                    ></div>
+                                </div>
+                                <div class="name">游戏大区</div>
+                                <div
+                                    class="select-box w-100"
+                                    style="width: 100%; margin-top: 8px"
+                                >
+                                    <div
+                                        class="w-100 flex-b"
+                                        onclick="toggleSelect(this)"
+                                    >
+                                        <div class="select-value f1">
+                                            <span id="layerSelect1"
+                                                >不限游戏区</span
+                                            >
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="option-list hidden">
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect1')"
+                                        >
+                                            不限游戏区
+                                        </div>
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect1')"
+                                        >
+                                            笑傲江湖
+                                        </div>
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect1')"
+                                        >
+                                            海纳百川
+                                        </div>
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect1')"
+                                        >
+                                            金戈铁马
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="optional" class="hidden">
+                                    <div class="name">职业</div>
+                                    <div
+                                        class="flex align-center multi-selection"
+                                    >
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            战士
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            道士
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            魔法师
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            射手
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            枪手
+                                        </div>
+                                    </div>
+                                    <div class="name">性别</div>
+                                    <div
+                                        class="flex align-center multi-selection"
+                                    >
+                                        <div
+                                            class="tag"
+                                            onclick="toggleSingle(this,'tag')"
+                                        >
+                                            男
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleSingle(this,'tag')"
+                                        >
+                                            女
+                                        </div>
+                                    </div>
+                                    <div class="name">等级区间(级)</div>
+                                    <div
+                                        class="flex-b align-center price-box-wrapper"
+                                    >
+                                        <div class="price-item">
+                                            <input
+                                                type="number"
+                                                placeholder="自定最低等级"
+                                            />
+                                        </div>
+                                        <span>-</span>
+                                        <div class="price-item">
+                                            <input
+                                                type="number"
+                                                placeholder="自定最高等级"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="name">价格区间(元)</div>
+                                    <div
+                                        class="flex-b align-center price-box-wrapper"
+                                    >
+                                        <div class="price-item">
+                                            <input
+                                                type="number"
+                                                placeholder="自定最低价格"
+                                            />
+                                        </div>
+                                        <span>-</span>
+                                        <div class="price-item">
+                                            <input
+                                                type="number"
+                                                placeholder="自定最高价格"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="btn-group-container flex-b align-center"
+                            >
+                                <div class="cancel-btn">重置</div>
+                                <div class="buy-btn">确定</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer-box hidden" id="layer2">
+                        <div
+                            class="content-box flex-v flex-b animate__animated animate__fadeInUp"
+                        >
+                            <div>
+                                <div class="flex-b align-center">
+                                    <div class="flex align-center">
+                                        <div class="brand">条件筛选</div>
+                                        <div class="sub">可多选</div>
+                                    </div>
+                                    <div
+                                        class="close"
+                                        onclick="toggleLayer('#layer2',false)"
+                                    ></div>
+                                </div>
+                                <div class="flex align-center multi-selection">
+                                    <div
+                                        class="tag active"
+                                        onclick="toggleSingle(this,'tag',true)"
+                                    >
+                                        角色
+                                    </div>
+                                    <div
+                                        class="tag"
+                                        onclick="toggleSingle(this,'tag',true)"
+                                    >
+                                        货币
+                                    </div>
+                                </div>
+                                <div class="name">游戏大区</div>
+                                <div
+                                    class="select-box w-100"
+                                    style="width: 100%; margin-top: 8px"
+                                >
+                                    <div
+                                        class="w-100 flex-b"
+                                        onclick="toggleSelect(this)"
+                                    >
+                                        <div class="select-value f1">
+                                            <span id="layerSelect2"
+                                                >不限游戏区</span
+                                            >
+                                            <div class="arrow"></div>
+                                        </div>
+                                    </div>
+                                    <div class="option-list hidden">
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect2')"
+                                        >
+                                            不限游戏区
+                                        </div>
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect2')"
+                                        >
+                                            笑傲江湖
+                                        </div>
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect2')"
+                                        >
+                                            海纳百川
+                                        </div>
+                                        <div
+                                            class="option-item"
+                                            onclick="getOption(this.innerText,'#layerSelect2')"
+                                        >
+                                            金戈铁马
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="optional">
+                                    <div class="name">职业</div>
+                                    <div
+                                        class="flex align-center multi-selection"
+                                    >
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            战士
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            道士
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            魔法师
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            射手
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleMulti(this)"
+                                        >
+                                            枪手
+                                        </div>
+                                    </div>
+                                    <div class="name">性别</div>
+                                    <div
+                                        class="flex align-center multi-selection"
+                                    >
+                                        <div
+                                            class="tag"
+                                            onclick="toggleSingle(this,'tag')"
+                                        >
+                                            男
+                                        </div>
+                                        <div
+                                            class="tag"
+                                            onclick="toggleSingle(this,'tag')"
+                                        >
+                                            女
+                                        </div>
+                                    </div>
+                                    <div class="name">等级区间(级)</div>
+                                    <div
+                                        class="flex-b align-center price-box-wrapper"
+                                    >
+                                        <div class="price-item">
+                                            <input
+                                                type="number"
+                                                placeholder="自定最低等级"
+                                            />
+                                        </div>
+                                        <span>-</span>
+                                        <div class="price-item">
+                                            <input
+                                                type="number"
+                                                placeholder="自定最高等级"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="name">价格区间(元)</div>
+                                <div
+                                    class="flex-b align-center price-box-wrapper"
+                                >
+                                    <div class="price-item">
+                                        <input
+                                            type="number"
+                                            placeholder="自定最低价格"
+                                        />
+                                    </div>
+                                    <span>-</span>
+                                    <div class="price-item">
+                                        <input
+                                            type="number"
+                                            placeholder="自定最高价格"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="btn-group-container flex-b align-center"
+                            >
+                                <div class="cancel-btn">重置</div>
+                                <div class="buy-btn">确定</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search">
+                <div id="searchBox" class="pc-nav">
+                    <div class="container">
+                        <div class="flex-b align-center w-100">
+                            <div class="search-box flex-b align-center">
+                                <div class="flex align-center f1">
+                                    <div class="search-item-box">
+                                        <div
+                                            class="search-item flex-b align-center"
+                                            style="width: 97px"
+                                            onclick="toggleSelect(this)"
+                                        >
+                                            <span id="select1">不限游戏区</span>
+                                            <span
+                                                class="glyphicon glyphicon-chevron-down arrow"
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="option-list hidden"
+                                            style="width: 120px"
+                                        >
+                                            <div
+                                                class="option-item"
+                                                onclick="getOption(this.innerText,'#select1','#queryPart')"
+                                            >
+                                                不限游戏区
+                                            </div>
+                                            <div
+                                                class="option-item"
+                                                onclick="getOption(this.innerText,'#select1','#queryPart')"
+                                            >
+                                                笑傲江湖
+                                            </div>
+                                            <div
+                                                class="option-item"
+                                                onclick="getOption(this.innerText,'#select1','#queryPart')"
+                                            >
+                                                海纳百川
+                                            </div>
+                                            <div
+                                                class="option-item"
+                                                onclick="getOption(this.innerText,'#select1','#queryPart')"
+                                            >
+                                                金戈铁马
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="search-item-box">
+                                        <div
+                                            class="search-item flex-b align-center"
+                                            style="width: 55px"
+                                            onclick="toggleSelect(this)"
+                                        >
+                                            <span id="select2">角色</span>
+                                            <span
+                                                class="glyphicon glyphicon-chevron-down arrow"
+                                            ></span>
+                                        </div>
+                                        <div
+                                            class="option-list hidden"
+                                            style="width: 80px"
+                                        >
+                                            <div
+                                                class="option-item"
+                                                onclick="toggleJueseSelect(this.innerText,'#select2','#queryPart','#innerOptional',true)"
+                                            >
+                                                角色
+                                            </div>
+                                            <div
+                                                class="option-item"
+                                                onclick="toggleJueseSelect(this.innerText,'#select2','#queryPart','#innerOptional',false)"
+                                            >
+                                                货币
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <input
+                                        type="text"
+                                        placeholder="请输入关键词"
+                                    />
+                                </div>
+                                <div class="flex-e align-center">
+                                    <div class="search-btn flex-c align-center">
+                                        搜索
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-e align-center kefu">
+                                <div class="icon-box">
+                                    <div class="icon"></div>
+                                </div>
+                                在线客服
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="container hidden animate__animated animate__fadeIn"
+                        id="queryPart"
+                    >
+                        <div class="query-box" id="queryBox">
+                            <div class="header flex-b align-center">
+                                <div class="brand-box" style="margin-top: 0">
+                                    <div class="brand">条件筛选</div>
+                                    <div class="sub">可多选</div>
+                                </div>
+                                <div class="flex-e align-center">
+                                    <div
+                                        class="reset-btn"
+                                        style="margin-right: 8px"
+                                    >
+                                        重置
+                                    </div>
+                                    <div class="search-btn">搜索</div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="flex align-center item">
+                                    <div class="name">游戏大区</div>
+                                    <div
+                                        class="select-box"
+                                        style="width: 366px; margin-top: 8px"
+                                    >
+                                        <div
+                                            class="w-100 flex-b"
+                                            onclick="toggleSelect(this)"
+                                        >
+                                            <div class="select-value f1">
+                                                <span id="layerSelect1Web"
+                                                    >不限游戏区</span
+                                                >
+                                                <div class="arrow"></div>
+                                            </div>
+                                        </div>
+                                        <div class="option-list hidden">
+                                            <div
+                                                class="option-item"
+                                                onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')"
+                                            >
+                                                不限游戏区
+                                            </div>
+                                            <div
+                                                class="option-item"
+                                                onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')"
+                                            >
+                                                笑傲江湖
+                                            </div>
+                                            <div
+                                                class="option-item"
+                                                onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')"
+                                            >
+                                                海纳百川
+                                            </div>
+                                            <div
+                                                class="option-item"
+                                                onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')"
+                                            >
+                                                金戈铁马
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="outerOptional">
+                                    <div id="innerOptional">
+                                        <div class="flex align-center item">
+                                            <div class="name">职业</div>
+                                            <div
+                                                class="flex align-center multi-selection"
+                                                id="multiSelection"
+                                            >
+                                                <div
+                                                    class="tag"
+                                                    onclick="toggleMulti(this,'#multiSelection')"
+                                                >
+                                                    战士
+                                                </div>
+                                                <div
+                                                    class="tag"
+                                                    onclick="toggleMulti(this,'#multiSelection')"
+                                                >
+                                                    道士
+                                                </div>
+                                                <div
+                                                    class="tag"
+                                                    onclick="toggleMulti(this,'#multiSelection')"
+                                                >
+                                                    魔法师
+                                                </div>
+                                                <div
+                                                    class="tag"
+                                                    onclick="toggleMulti(this,'#multiSelection')"
+                                                >
+                                                    射手
+                                                </div>
+                                                <div
+                                                    class="tag"
+                                                    onclick="toggleMulti(this,'#multiSelection')"
+                                                >
+                                                    枪手
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex align-center item">
+                                            <div class="name">性别</div>
+                                            <div
+                                                class="flex align-center multi-selection"
+                                            >
+                                                <div
+                                                    class="tag"
+                                                    onclick="toggleSingle(this,'tag')"
+                                                >
+                                                    男
+                                                </div>
+                                                <div
+                                                    class="tag"
+                                                    onclick="toggleSingle(this,'tag')"
+                                                >
+                                                    女
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex align-center item">
+                                            <div class="name">等级区间(级)</div>
+                                            <div
+                                                class="flex-b align-center price-box-wrapper"
+                                            >
+                                                <div class="price-item">
+                                                    <input
+                                                        type="number"
+                                                        placeholder="自定最低等级"
+                                                    />
+                                                </div>
+                                                <span>-</span>
+                                                <div class="price-item">
+                                                    <input
+                                                        type="number"
+                                                        placeholder="自定最高等级"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex align-center item">
+                                        <div class="name">价格区间(元)</div>
+                                        <div
+                                            class="flex-b align-center price-box-wrapper"
+                                        >
+                                            <div class="price-item">
+                                                <input
+                                                    type="number"
+                                                    placeholder="自定最低价格"
+                                                />
+                                            </div>
+                                            <span>-</span>
+                                            <div class="price-item">
+                                                <input
+                                                    type="number"
+                                                    placeholder="自定最高价格"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container pc-nav">
+                <div class="detail-box flex">
+                    <div class="img-box">
+                        <img
+                            src="https://img2.baidu.com/it/u=3897604544,998671156&fm=253&fmt=auto&app=138&f=JPEG"
+                            alt=""
+                            class="img"
+                        />
+                    </div>
+                    <div class="f1 right">
+                        <div class="title">
+                            我是标题我是标题我是标题我是标题我是我是标题
+                        </div>
+                        <div class="price"><span>¥</span>1200</div>
+                        <div class="flex">
+                            <div class="desc" style="margin-right: 15px">
+                                商品信息：
+                            </div>
+                            <div class="f1 flex">
+                                <div class="box1">
+                                    <div class="flex align-center row">
+                                        <div class="col">角色名</div>
+                                        <div class="col">角色名</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">职业</div>
+                                        <div class="col">战士</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">性别</div>
+                                        <div class="col">男</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">等级</div>
+                                        <div class="col">1</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">经验</div>
+                                        <div class="col">0</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">经验百分比</div>
+                                        <div class="col">0%</div>
+                                    </div>
+                                </div>
+                                <div class="box1">
+                                    <div class="flex align-center row">
+                                        <div class="col">PK</div>
+                                        <div class="col">0</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">婚否</div>
+                                        <div class="col">否</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">师徒</div>
+                                        <div class="col">否</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">金币</div>
+                                        <div class="col">10000</div>
+                                    </div>
+                                    <div class="flex align-center row">
+                                        <div class="col">元宝</div>
+                                        <div class="col">200</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="countdown flex align-center">
+                            <div class="desc">公示期时间：</div>
+                            <span class="blue" style="margin-left: 10px"
+                                >2</span
+                            >
+                            <span class="blue">8</span>
+                            <span>天</span>
+                            <span class="blue">2</span>
+                            <span class="blue">8</span>
+                            <span>时</span>
+                            <span class="blue">2</span>
+                            <span class="blue">8</span>
+                            <span>分</span>
+                            <span class="blue">2</span>
+                            <span class="blue">8</span>
+                            <span>秒</span>
+                        </div>
+                        <div class="btn-group flex align-center">
+                            <div class="buy-btn">立即购买</div>
+                            <div class="charge-btn">立即充值</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rich-box">
+                    <div class="header">交易流程</div>
+                    <div class="content">
+                        公示期：卖家发布商品后需先经过公示告知，如公示期购买则买家依然要支付同等手续费，具体手续费详见配置；
+                        <div class="img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-nav">
+                <div class="img-box">
+                    <img
+                        src="https://img2.baidu.com/it/u=3897604544,998671156&fm=253&fmt=auto&app=138&f=JPEG"
+                        alt=""
+                        class="img"
+                    />
+                </div>
+                <div style="padding: 8px; box-sizing: border-box">
+                    <div class="card">
+                        <div class="flex-b align-center">
+                            <div class="price"><span>¥</span>1200</div>
+                            <div class="flex-e align-center">
+                                <div class="role-tag">战士</div>
+                                <div class="border-tag">10级</div>
+                                <div class="border-tag">男</div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            我是标题我是标题我是标题我是标题我是我是标题我是标题我是标题我是标题
+                        </div>
+                        <div class="zone-box flex align-center">
+                            <div class="left">游戏区</div>
+                            <div class="right">一卡通测试一区</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flex-b align-center">
+                            <span>公示期时间</span>
+                            <div class="countdown flex align-center">
+                                <span class="blue" style="margin-left: 10px"
+                                    >2</span
+                                >
+                                <span class="blue">8</span>
+                                <span>天</span>
+                                <span class="blue">2</span>
+                                <span class="blue">8</span>
+                                <span>时</span>
+                                <span class="blue">2</span>
+                                <span class="blue">8</span>
+                                <span>分</span>
+                                <span class="blue">2</span>
+                                <span class="blue">8</span>
+                                <span>秒</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="tab-box flex">
+                            <div class="f1 flex-c">
+                                <div
+                                    class="tab-item active"
+                                    onclick="toggleRoleDetailTab(this,'#tab1')"
+                                >
+                                    <div class="tab">商品信息</div>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <div class="f1 flex-c">
+                                <div
+                                    class="tab-item"
+                                    onclick="toggleRoleDetailTab(this,'#tab2')"
+                                >
+                                    <div class="tab">交易流程</div>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab">
+                                <div class="box1 w-100">
+                                    <div class="flex align-center _row">
+                                        <div class="col">角色名</div>
+                                        <div class="col">角色名</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">职业</div>
+                                        <div class="col">战士</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">性别</div>
+                                        <div class="col">男</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">等级</div>
+                                        <div class="col">1</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">经验</div>
+                                        <div class="col">0</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">经验百分比</div>
+                                        <div class="col">0%</div>
+                                    </div>
+
+                                    <div class="flex align-center _row">
+                                        <div class="col">PK</div>
+                                        <div class="col">0</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">婚否</div>
+                                        <div class="col">否</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">师徒</div>
+                                        <div class="col">否</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">金币</div>
+                                        <div class="col">10000</div>
+                                    </div>
+                                    <div class="flex align-center _row">
+                                        <div class="col">元宝</div>
+                                        <div class="col">200</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2" class="hidden tab">
+                                公示期：卖家发布商品后需先经过公示告知，如公示期购买则买家依然要支付同等手续费，具体手续费详见配置；
+                                <div class="img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="footer-comp">
+                    <div class="container h-100">
+                        <div class="grid-4 h-100">
+                            <div class="item">
+                                <div class="icon"></div>
+                                <div>
+                                    <div class="name">游戏交易 应有尽有</div>
+                                    <div class="sub">
+                                        关于游戏你想要的，这里都有
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="icon"></div>
+                                <div>
+                                    <div class="name">交易安全 资金保障</div>
+                                    <div class="sub">
+                                        保障交易安全的事，我们都做
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="icon"></div>
+                                <div>
+                                    <div class="name">7*24小时 专属客服</div>
+                                    <div class="sub">
+                                        时时刻刻想联系我，客服都在
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="icon"></div>
+                                <div>
+                                    <div class="name">权威认证 安全可靠</div>
+                                    <div class="sub">
+                                        我是值得信赖平台，大家都造
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btm-box">
+                    <div class="container h-100">
+                        <div class="flex-b align-center h-100">
+                            <span>@CopyRight 壹号通</span>
+                            <span>湘ICP备2021017435号</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mMenu" class="hidden">
+                <div class="m-menu-layer">
+                    <img
+                        src="./img/close.png"
+                        alt=""
+                        class="close"
+                        onclick="toggleMMenu(false)"
+                    />
+                    <div class="menu-list">
+                        <div
+                            class="menu-item pointer"
+                            data-path="index"
+                            onclick="toPage('index')"
+                        >
+                            <span>首页<span class="line"></span></span>
+                        </div>
+                        <div
+                            class="menu-item pointer"
+                            data-path="role"
+                            onclick="toPage('role')"
+                        >
+                            <span>角色<span class="line"></span></span>
+                        </div>
+                        <div
+                            class="menu-item pointer"
+                            data-path="lingfu"
+                            onclick="toPage('lingfu')"
+                        >
+                            <span>灵符<span class="line"></span></span>
+                        </div>
+                        <div
+                            class="menu-item pointer"
+                            data-path="jingangshi"
+                            onclick="toPage('jingangshi')"
+                        >
+                            <span>金刚石<span class="line"></span></span>
+                        </div>
+                        <div
+                            class="menu-item pointer"
+                            data-path="card"
+                            onclick="toPage('card')"
+                        >
+                            <span>秒卡<span class="line"></span></span>
+                        </div>
+                        <div
+                            class="menu-item pointer"
+                            data-path="yuanbao"
+                            onclick="toPage('yuanbao')"
+                        >
+                            <span>元宝<span class="line"></span></span>
+                        </div>
+                        <div
+                            class="menu-item pointer"
+                            data-path="jinbi"
+                            onclick="toPage('jinbi')"
+                        >
+                            <span>金币<span class="line"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/header.js"></script>
+        <script>
+            window.onload = () => {
+                // $("#header").load("./components/header.html")
+                // $("#search").load("./components/search.html")
+                // $("#footer").load("./components/footer.html")
+                document.body.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (
+                        !(
+                            e.target.classList.contains("option-list") ||
+                            e.target.classList.contains("option-item")
+                        )
+                    ) {
+                        clearOptions();
+                    }
+                });
+            };
+            function toggleRoleDetailTab(target, relativeEl) {
+                let list =
+                    target.parentNode.parentNode.querySelectorAll(".tab-item");
+                for (let i = 0; i < list.length; i++) {
+                    list[i].classList.remove("active");
+                }
+                target.classList.add("active");
+
+                let relativeList = document
+                    .querySelector(".tab-content")
+                    .querySelectorAll(".tab");
+                for (let i = 0; i < relativeList.length; i++) {
+                    relativeList[i].classList.add("hidden");
+                }
+                document.querySelector(relativeEl).classList.remove("hidden");
+            }
+        </script>
+    </body>
+</html>

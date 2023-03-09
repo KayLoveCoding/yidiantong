@@ -1,0 +1,39 @@
+#role .brand-box {
+  margin-top: 40px;
+}
+#role .brand-box .brand {
+  font-size: 24px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #1A1D1E;
+}
+#role .brand-box .order {
+  margin-right: 18px;
+}
+#role .brand-box .line {
+  height: 16px;
+  width: 1px;
+  background-color: #C4C7C8;
+  margin-left: 18px;
+  margin-right: 12px;
+}
+#role .brand-box .menu {
+  width: 16px;
+  height: 16px;
+  background: url(../img/order1.png) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+}
+#role #cardType .table-box {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 24px 28px;
+}
+#role #cardType .table-box .tr {
+  display: grid;
+  grid-template-columns: 140px 1fr 120px 80px 60px 60px 70px 240px 100px;
+}

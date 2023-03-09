@@ -1,0 +1,4 @@
+#yuanbao #cardType .table-box .tr {
+  display: grid;
+  grid-template-columns: 140px 1fr 120px 80px 120px 260px 100px;
+}

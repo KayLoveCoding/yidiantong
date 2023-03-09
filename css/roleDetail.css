@@ -1,0 +1,452 @@
+#roleDetail .pc-nav .detail-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  border-radius: 12px;
+  background: #FFFFFF;
+}
+#roleDetail .pc-nav .detail-box .desc {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #84888A;
+  width: 100px;
+}
+#roleDetail .pc-nav .detail-box .img-box {
+  width: 390px;
+  height: 390px;
+  margin-right: 32px;
+}
+#roleDetail .pc-nav .detail-box .img-box .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px 12px 12px 12px;
+}
+#roleDetail .pc-nav .detail-box .box1:first-child {
+  margin-right: 40px;
+}
+#roleDetail .pc-nav .detail-box .box1 .col {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 16px 10px;
+  border: 1px solid #F3F3F3;
+}
+#roleDetail .pc-nav .detail-box .box1 .col:first-child {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #84888A;
+  width: 104px;
+}
+#roleDetail .pc-nav .detail-box .box1 .col:last-child {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+  width: 140px;
+  margin-left: -1px;
+}
+#roleDetail .pc-nav .detail-box .box1 .row {
+  margin-top: -1px;
+}
+#roleDetail .pc-nav .detail-box .title {
+  font-size: 15px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #1A1D1E;
+  margin-bottom: 24px;
+}
+#roleDetail .pc-nav .detail-box .price {
+  font-size: 24px;
+  font-family: Roboto-Regular, Roboto;
+  font-weight: 400;
+  color: #F26516;
+  margin-bottom: 40px;
+}
+#roleDetail .pc-nav .detail-box .price span {
+  font-size: 15px;
+  font-family: Roboto-Regular, Roboto;
+  font-weight: 400;
+  color: #F26516;
+}
+#roleDetail .pc-nav .detail-box .countdown {
+  margin-top: 12px;
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+}
+#roleDetail .pc-nav .detail-box .countdown span {
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #84888A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#roleDetail .pc-nav .detail-box .countdown span.blue {
+  width: 11px;
+  height: 22px;
+  background: rgba(24, 151, 214, 0.1);
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 2px;
+  color: #1897D6;
+}
+#roleDetail .pc-nav .detail-box .countdown span.gray {
+  width: 11px;
+  height: 22px;
+  background: rgba(73, 77, 80, 0.1);
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 2px;
+  color: #494D50;
+}
+#roleDetail .pc-nav .detail-box .btn-group {
+  margin-top: 40px;
+}
+#roleDetail .pc-nav .detail-box .btn-group .buy-btn {
+  margin-right: 15px;
+}
+#roleDetail .pc-nav .rich-box {
+  background: #FFFFFF;
+  border-radius: 12px 12px 12px 12px;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+#roleDetail .pc-nav .rich-box .header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #1A1D1E;
+  border-bottom: 1px solid #f3f3f3;
+}
+#roleDetail .pc-nav .rich-box .content {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+#roleDetail .pc-nav .rich-box .content img {
+  max-width: 100%;
+}
+#roleDetail .pc-nav .rich-box .content .img {
+  height: 248px;
+  width: 100%;
+  background: url(../img/rich.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#roleDetail .m-nav .img-box {
+  height: 375px;
+  width: 375px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#roleDetail .m-nav .img-box img {
+  height: 100%;
+  width: 100%;
+}
+#roleDetail .m-nav .card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 12px;
+  margin-top: 9px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+#roleDetail .m-nav .price {
+  font-size: 24px;
+  font-family: Roboto-Regular, Roboto;
+  font-weight: 400;
+  color: #F26516;
+}
+#roleDetail .m-nav .price span {
+  font-size: 15px;
+  font-family: Roboto-Regular, Roboto;
+  font-weight: 400;
+  color: #F26516;
+}
+#roleDetail .m-nav .countdown {
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+}
+#roleDetail .m-nav .countdown span {
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #84888A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#roleDetail .m-nav .countdown span.blue {
+  width: 11px;
+  height: 22px;
+  background: rgba(24, 151, 214, 0.1);
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 2px;
+  color: #1897D6;
+}
+#roleDetail .m-nav .countdown span.gray {
+  width: 11px;
+  height: 22px;
+  background: rgba(73, 77, 80, 0.1);
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 2px;
+  color: #494D50;
+}
+#roleDetail .m-nav .role-tag {
+  height: 18px;
+  background: #1E3C72;
+  border-radius: 2px 2px 2px 2px;
+  opacity: 1;
+  border: 1px solid #1E3C72;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 4px;
+}
+#roleDetail .m-nav .border-tag {
+  margin-right: 4px;
+  height: 18px;
+  border-radius: 2px 2px 2px 2px;
+  opacity: 1;
+  border: 1px solid #1897D6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 8px;
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #1897D6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#roleDetail .m-nav .zone-box {
+  width: 137px;
+  height: 18px;
+  border-radius: 2px 2px 2px 2px;
+  opacity: 1;
+  border: 1px solid #C4C7C8;
+  margin-top: 4px;
+  margin-top: 10px;
+}
+#roleDetail .m-nav .zone-box .left {
+  width: 45px;
+  height: 17px;
+  background: #F3F3F3;
+  border-radius: 2px 0px 0px 2px;
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#roleDetail .m-nav .zone-box .right {
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+}
+#roleDetail .m-nav .title {
+  font-size: 14px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #1A1D1E;
+  margin-top: 15px;
+}
+#roleDetail .m-nav .tab-box {
+  border-bottom: 1px solid #f3f3f3;
+}
+#roleDetail .m-nav .tab-box .tab-item .tab {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+  padding-bottom: 9px;
+}
+#roleDetail .m-nav .tab-box .tab-item .line {
+  width: 56px;
+  height: 3px;
+  background: transparent;
+  border-radius: 1px 1px 1px 1px;
+}
+#roleDetail .m-nav .tab-box .tab-item.active .tag {
+  font-size: 14px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #1E3C72;
+}
+#roleDetail .m-nav .tab-box .tab-item.active .line {
+  background: #1E3C72;
+}
+#roleDetail .m-nav .tab-content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px 0 15px;
+}
+#roleDetail .m-nav .box1:first-child {
+  margin-right: 40px;
+}
+#roleDetail .m-nav .box1 .col {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 16px 10px;
+  border: 1px solid #F3F3F3;
+}
+#roleDetail .m-nav .box1 .col:first-child {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #84888A;
+  width: 104px;
+}
+#roleDetail .m-nav .box1 .col:last-child {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+  margin-left: -1px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#roleDetail .m-nav .box1 ._row {
+  margin-top: -1px;
+}
+#roleDetail .m-nav #tab2 {
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 0;
+}
+#roleDetail .m-nav #tab2 .img {
+  width: 100%;
+  height: 447px;
+  background: url(../img/m-rich.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#buyModal .buy-modal {
+  position: fixed;
+  width: 350px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 26px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25vh;
+  z-index: 102;
+}
+#buyModal .buy-modal .name {
+  font-size: 16px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #1A1D1E;
+}
+#buyModal .buy-modal .close {
+  width: 11px;
+  height: 11px;
+  background: url(../img/close.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+#buyModal .buy-modal .form-item {
+  margin-top: 22px;
+}
+#buyModal .buy-modal .form-item .select-box .select-value {
+  height: 40px;
+}
+#buyModal .buy-modal .form-item .input-box {
+  height: 40px;
+  background: #F3F3F3;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+}
+#buyModal .buy-modal .form-item .input-box input {
+  height: 40px;
+  font-size: 16px;
+}
+#buyModal .buy-modal .btn-group {
+  margin-top: 30px;
+}
+@media screen and (max-width: 1200px) {
+  #buyModal .buy-modal {
+    width: 350px;
+  }
+}
+#mJinbi .fixed-btn-group {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 103;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 10px 30px;
+}

@@ -1,0 +1,345 @@
+<div id="cardType" class="w-100">
+	<div class="card-list panel-list w-100">
+		<div class="order-list m-flex flex-a align-center " style="margin-bottom: 10px;">
+			<div class="order active" onclick="toggleOrderTab(this)" style="background: transparent;">价钱排序<div
+					class="icon">
+				</div>
+			</div>
+			<div class="order" style="background: transparent;" onclick="toggleOrderTab(this)">最新发布<div class="icon">
+				</div>
+			</div>
+		</div>
+		<div class="table-box w-100 hidden-pad-grid-lg">
+			<div class="tr">
+				<div class="th"></div>
+				<div class="th">标题</div>
+				<div class="th">游戏区</div>
+				<div class="th">职业</div>
+				<div class="th">等级</div>
+				<div class="th">性别</div>
+				<div class="th flex align-center" onclick="togglePaixu(this)">价格<div class="paixu-item paixu"></div>
+				</div>
+				<div class="th flex align-center" onclick="togglePaixu(this)">时间<div class="paixu-item paixu"></div>
+				</div>
+				<div class="th"></div>
+			</div>
+			<div class="tr">
+				<div class="td">
+					<div class="img-box">
+						<div class="type-badge"
+							style="background: url(./img/juese.png) no-repeat;background-position: center;background-size: contain;">
+						</div>
+						<img src="https://img1.baidu.com/it/u=2305316345,3897980287&fm=253&fmt=auto&app=138&f=PNG"
+							alt="">
+					</div>
+				</div>
+				<div class="td">我是标题我是标题我是标题我是标题我是我是标题</div>
+				<div class="td">一卡通测试一区</div>
+				<div class="td">战士</div>
+				<div class="td">1</div>
+				<div class="td">男</div>
+				<div class="td">
+					<div class="price"><span>¥</span>1200</div>
+				</div>
+				<div class="td">
+					<div class="countdown flex align-center">
+						还剩
+						<span class="blue" style="margin-left: 5px;">2</span>
+						<span class="blue">8</span>
+						<span>天</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>时</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>分</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span style="margin-right: 5px;">秒</span>
+						过公示期
+					</div>
+				</div>
+				<div class="td">
+					<div class="detail-btn"  onclick="toPage('roleDetail')">查看详情</div>
+				</div>
+			</div>
+			<div class="tr">
+				<div class="td">
+					<div class="img-box">
+						<div class="type-badge"
+							style="background: url(./img/juese.png) no-repeat;background-position: center;background-size: contain;">
+						</div>
+						<img src="https://img1.baidu.com/it/u=2305316345,3897980287&fm=253&fmt=auto&app=138&f=PNG"
+							alt="">
+					</div>
+				</div>
+				<div class="td">我是标题我是标题我是标题我是标题我是我是标题</div>
+				<div class="td">一卡通测试一区</div>
+				<div class="td">战士</div>
+				<div class="td">1</div>
+				<div class="td">男</div>
+				<div class="td">
+					<div class="price"><span>¥</span>1200</div>
+				</div>
+				<div class="td">
+					<div class="countdown flex align-center">
+						还剩
+						<span class="blue" style="margin-left: 5px;">2</span>
+						<span class="blue">8</span>
+						<span>天</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>时</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>分</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span style="margin-right: 5px;">秒</span>
+						过公示期
+					</div>
+				</div>
+				<div class="td">
+					<div class="detail-btn" onclick="toPage('roleDetail')">查看详情</div>
+				</div>
+			</div>
+			<div class="tr">
+				<div class="td">
+					<div class="img-box">
+						<div class="type-badge"
+							style="background: url(./img/juese.png) no-repeat;background-position: center;background-size: contain;">
+						</div>
+						<img src="https://img1.baidu.com/it/u=2305316345,3897980287&fm=253&fmt=auto&app=138&f=PNG"
+							alt="">
+					</div>
+				</div>
+				<div class="td">我是标题我是标题我是标题我是标题我是我是标题</div>
+				<div class="td">一卡通测试一区</div>
+				<div class="td">战士</div>
+				<div class="td">1</div>
+				<div class="td">男</div>
+				<div class="td">
+					<div class="price"><span>¥</span>1200</div>
+				</div>
+				<div class="td">
+					<div class="countdown flex align-center">
+						还剩
+						<span class="blue" style="margin-left: 5px;">2</span>
+						<span class="blue">8</span>
+						<span>天</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>时</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>分</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span style="margin-right: 5px;">秒</span>
+						过公示期
+					</div>
+				</div>
+				<div class="td">
+					<div class="detail-btn" onclick="toPage('roleDetail')">查看详情</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="pad-block-lg">
+			<div class="card-item pad-item flex">
+				<div class="img-box">
+					<div class="type-badge"
+						style="background: url(./img/juese.png) no-repeat;background-position: center;background-size: contain;">
+					</div>
+					<img src="https://img1.baidu.com/it/u=2305316345,3897980287&fm=253&fmt=auto&app=138&f=PNG" alt="">
+				</div>
+				<div class="f1 flex-b flex-v">
+					<div>
+						<div class="title">我是标题我是标题我是标题我是标题我是我是标题</div>
+						<div class="zone-box flex align-center">
+							<div class="left">游戏区</div>
+							<div class="right">一卡通测试一区</div>
+						</div>
+					</div>
+					<div>
+						<div class="tag-list flex align-center" >
+							<div class="role-tag">战士</div>
+							<div class="border-tag">10级</div>
+							<div class="border-tag">男</div>
+						</div>
+						<div class="price"><span>¥</span>1200</div>
+						<div class="countdown flex align-center hidden-pad-lg">
+							还剩
+							<span class="blue" style="margin-left: 5px;">2</span>
+							<span class="blue">8</span>
+							<span>天</span>
+							<span class="blue">2</span>
+							<span class="blue">8</span>
+							<span>时</span>
+							<span class="blue">2</span>
+							<span class="blue">8</span>
+							<span>分</span>
+							<span class="blue">2</span>
+							<span class="blue">8</span>
+							<span style="margin-right: 5px;">秒</span>
+							过公示期
+						</div>
+						<div class="pad-block-lg">
+							<div class="countdown flex align-center nowrap">
+								公示期时间
+								<span class="blue">2</span>
+								<span class="blue">8</span>
+								<span>天</span>
+								<span class="blue">2</span>
+								<span class="blue">8</span>
+								<span>时</span>
+								<span class="blue">2</span>
+								<span class="blue">8</span>
+								<span>分</span>
+								<span class="blue">2</span>
+								<span class="blue">8</span>
+								<span>秒</span>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		<div class="card-item pad-item flex">
+			<div class="img-box">
+				<div class="type-badge"
+					style="background: url(./img/juese.png) no-repeat;background-position: center;background-size: contain;">
+				</div>
+				<img src="https://img1.baidu.com/it/u=2305316345,3897980287&fm=253&fmt=auto&app=138&f=PNG" alt="">
+			</div>
+			<div class="f1 flex-b flex-v">
+				<div>
+					<div class="title">我是标题我是标题我是标题我是标题我是我是标题</div>
+					<div class="zone-box flex align-center">
+						<div class="left">游戏区</div>
+						<div class="right">一卡通测试一区</div>
+					</div>
+				</div>
+				<div>
+					<div class="tag-list flex align-center" >
+						<div class="role-tag">战士</div>
+						<div class="border-tag">10级</div>
+						<div class="border-tag">男</div>
+					</div>
+					<div class="price"><span>¥</span>1200</div>
+					<div class="countdown flex align-center hidden-pad-lg">
+						还剩
+						<span class="blue" style="margin-left: 5px;">2</span>
+						<span class="blue">8</span>
+						<span>天</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>时</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span>分</span>
+						<span class="blue">2</span>
+						<span class="blue">8</span>
+						<span style="margin-right: 5px;">秒</span>
+						过公示期
+					</div>
+					<div class="pad-block-lg">
+						<div class="countdown flex align-center nowrap">
+							公示期时间
+							<span class="blue">2</span>
+							<span class="blue">8</span>
+							<span>天</span>
+							<span class="blue">2</span>
+							<span class="blue">8</span>
+							<span>时</span>
+							<span class="blue">2</span>
+							<span class="blue">8</span>
+							<span>分</span>
+							<span class="blue">2</span>
+							<span class="blue">8</span>
+							<span>秒</span>
+						</div>
+					</div>
+		
+		
+				</div>
+			</div>
+		</div>
+				<div class="card-item pad-item flex">
+					<div class="img-box">
+						<div class="type-badge"
+							style="background: url(./img/juese.png) no-repeat;background-position: center;background-size: contain;">
+						</div>
+						<img src="https://img1.baidu.com/it/u=2305316345,3897980287&fm=253&fmt=auto&app=138&f=PNG" alt="">
+					</div>
+					<div class="f1 flex-b flex-v">
+						<div>
+							<div class="title">我是标题我是标题我是标题我是标题我是我是标题</div>
+							<div class="zone-box flex align-center">
+								<div class="left">游戏区</div>
+								<div class="right">一卡通测试一区</div>
+							</div>
+						</div>
+						<div>
+							<div class="tag-list flex align-center" >
+								<div class="role-tag">战士</div>
+								<div class="border-tag">10级</div>
+								<div class="border-tag">男</div>
+							</div>
+							<div class="price"><span>¥</span>1200</div>
+							<div class="countdown flex align-center hidden-pad-lg">
+								还剩
+								<span class="blue" style="margin-left: 5px;">2</span>
+								<span class="blue">8</span>
+								<span>天</span>
+								<span class="blue">2</span>
+								<span class="blue">8</span>
+								<span>时</span>
+								<span class="blue">2</span>
+								<span class="blue">8</span>
+								<span>分</span>
+								<span class="blue">2</span>
+								<span class="blue">8</span>
+								<span style="margin-right: 5px;">秒</span>
+								过公示期
+							</div>
+							<div class="pad-block-lg">
+								<div class="countdown flex align-center nowrap">
+									公示期时间
+									<span class="blue">2</span>
+									<span class="blue">8</span>
+									<span>天</span>
+									<span class="blue">2</span>
+									<span class="blue">8</span>
+									<span>时</span>
+									<span class="blue">2</span>
+									<span class="blue">8</span>
+									<span>分</span>
+									<span class="blue">2</span>
+									<span class="blue">8</span>
+									<span>秒</span>
+								</div>
+							</div>
+				
+				
+						</div>
+					</div>
+				</div>
+						
+		</div>
+	</div>
+	<div class="flex-c align-center pagination-box pc-flex">
+		<div class="page-item active">1</div>
+		<div class="page-item">2</div>
+		<div class="page-item">3</div>
+		<div class="page-item">4</div>
+		<div class="page-item">5</div>
+		<div class="page-item pc-nav">6</div>
+		<div class="page-item pc-nav">7</div>
+		<div class="page-item pc-nav">8</div>
+		<div class="page-item pc-nav">9</div>
+		<div class="page-item pc-nav">10</div>
+		<div class="page-item">下一页 ></div>
+	</div>
+</div>
