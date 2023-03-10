@@ -1679,6 +1679,19 @@ input {
   padding: 10px 30px;
   border-bottom: 1px solid #f2f3f4;
 }
+.fixed-btn-group {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 103;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 10px 30px;
+}
 #me .card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1721,4 +1734,102 @@ input {
   padding: 12px 0 15px;
   overflow: hidden;
   max-width: 100%;
+}
+#me .img-box {
+  margin-right: 20px;
+}
+#me .title {
+  font-weight: bold;
+}
+#me .type {
+  color: #666;
+  font-size: 12px;
+}
+#me .mb {
+  margin-bottom: 4px;
+}
+#me .zone-box {
+  width: 137px;
+  height: 18px;
+  border-radius: 2px 2px 2px 2px;
+  opacity: 1;
+  border: 1px solid #C4C7C8;
+  margin-top: 4px;
+}
+#me .zone-box .left {
+  width: 45px;
+  height: 17px;
+  background: #F3F3F3;
+  border-radius: 2px 0px 0px 2px;
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#me .zone-box .right {
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+}
+#me .price {
+  font-size: 24px;
+  font-family: Roboto-Regular, Roboto;
+  font-weight: 400;
+  color: #F26516;
+  margin-top: 12px;
+}
+#me .price span {
+  font-size: 15px;
+  font-family: Roboto-Regular, Roboto;
+  font-weight: 400;
+  color: #F26516;
+}
+#me .countdown {
+  margin-top: 12px;
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #494D50;
+}
+#me .countdown span {
+  font-size: 12px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #84888A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#me .countdown span.blue {
+  width: 11px;
+  height: 22px;
+  background: rgba(24, 151, 214, 0.1);
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 2px;
+  color: #1897D6;
+}
+#me .countdown span.gray {
+  width: 11px;
+  height: 22px;
+  background: rgba(73, 77, 80, 0.1);
+  border-radius: 2px 2px 2px 2px;
+  margin-right: 2px;
+  color: #494D50;
 }

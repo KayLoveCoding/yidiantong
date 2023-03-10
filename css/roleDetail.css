@@ -437,7 +437,8 @@
     width: 350px;
   }
 }
-#mJinbi .fixed-btn-group {
+#mJinbi .fixed-btn-group,
+#mRole .fixed-btn-group {
   position: fixed;
   bottom: 0;
   left: 0;

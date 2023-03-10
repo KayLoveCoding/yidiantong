@@ -1122,6 +1122,13 @@ input{
 		cursor: pointer;
 }
 #mMenu{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 101;
+	left: 0;
+	top: 0;
 	.m-menu-layer{
 		position: fixed;
 		width: 100%;
@@ -1148,6 +1155,19 @@ input{
 			border-bottom: 1px solid #f2f3f4;
 		}
 	}
+}
+.fixed-btn-group {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 103;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 10px 30px;
 }
 #me{
 	.card{
@@ -1195,4 +1215,90 @@ input{
 		overflow: hidden;
 		max-width: 100%;
 	}
+	.img-box{
+		margin-right: 20px;
+	}
+	.title{
+		font-weight: bold;
+	}
+	.type{
+		color: #666;
+		font-size: 12px;
+	}
+	.mb{
+		margin-bottom: 4px;
+	}
+	.zone-box{
+		width: 137px;
+		height: 18px;
+		border-radius: 2px 2px 2px 2px;
+		opacity: 1;
+		border: 1px solid #C4C7C8;
+		margin-top: 4px;
+		.left{
+			width: 45px;
+			height: 17px;
+			background: #F3F3F3;
+			border-radius: 2px 0px 0px 2px;
+			font-size: 12px;
+			font-family: PingFang SC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #494D50;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.right{
+			font-size: 12px;
+			font-family: PingFang SC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #494D50;
+		}
+	}
+	.price{
+		span{
+			font-size: 15px;
+			font-family: Roboto-Regular, Roboto;
+			font-weight: 400;
+			color: #F26516;
+		}
+		font-size: 24px;
+		font-family: Roboto-Regular, Roboto;
+		font-weight: 400;
+		color: #F26516;
+		margin-top: 12px;
+	}
+	.countdown{
+		margin-top: 12px;
+		font-size: 12px;
+		font-family: PingFang SC-Regular, PingFang SC;
+		font-weight: 400;
+		color: #494D50;
+		span{
+			font-size: 12px;
+			font-family: PingFang SC-Regular, PingFang SC;
+			font-weight: 400;
+			color: #84888A;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		span.blue{
+			width: 11px;
+			height: 22px;
+			background: rgba(24,151,214,0.1);
+			border-radius: 2px 2px 2px 2px;
+			margin-right: 2px;
+			color: #1897D6;
+		}
+		span.gray{
+			width: 11px;
+			height: 22px;
+			background: rgba(73,77,80,0.1);
+			border-radius: 2px 2px 2px 2px;
+			margin-right: 2px;
+			color: #494D50;
+		}
+	}
+		
 }
