@@ -150,7 +150,7 @@
 							</div>
 							<div id="optional" class="hidden">
 								<div class="name">职业</div>
-								<div class="flex align-center multi-selection">
+								<div class="flex align-center multi-selection" id="mQuery1">
 									<div class="tag" onclick="toggleMulti(this)">
 										战士
 									</div>
@@ -168,7 +168,7 @@
 									</div>
 								</div>
 								<div class="name">性别</div>
-								<div class="flex align-center multi-selection">
+								<div class="flex align-center multi-selection" id="mQuery2">
 									<div class="tag" onclick="toggleSingle(this,'tag')">
 										男
 									</div>
@@ -177,7 +177,7 @@
 									</div>
 								</div>
 								<div class="name">等级区间(级)</div>
-								<div class="flex-b align-center price-box-wrapper">
+								<div class="flex-b align-center price-box-wrapper" id="mQuery3">
 									<div class="price-item">
 										<input type="number" placeholder="自定最低等级" />
 									</div>
@@ -187,7 +187,7 @@
 									</div>
 								</div>
 								<div class="name">价格区间(元)</div>
-								<div class="flex-b align-center price-box-wrapper">
+								<div class="flex-b align-center price-box-wrapper" id="mQuery4">
 									<div class="price-item">
 										<input type="number" placeholder="自定最低价格" />
 									</div>
@@ -199,8 +199,8 @@
 							</div>
 						</div>
 						<div class="btn-group-container flex-b align-center">
-							<div class="cancel-btn">重置</div>
-							<div class="buy-btn">确定</div>
+							<div class="cancel-btn" onclick="mSubReset1()">重置</div>
+							<div class="buy-btn" onclick="mSubSearch1()">确定</div>
 						</div>
 					</div>
 				</div>
@@ -215,10 +215,10 @@
 								<div class="close" onclick="toggleLayer('#layer2',false)"></div>
 							</div>
 							<div class="flex align-center multi-selection">
-								<div class="tag active" onclick="toggleSingle(this,'tag',true)">
+								<div class="tag active" onclick="toggleSingle(this,'tag',true,true)">
 									角色
 								</div>
-								<div class="tag" onclick="toggleSingle(this,'tag',true)">
+								<div class="tag" onclick="toggleSingle(this,'tag',true,true)">
 									货币
 								</div>
 							</div>
@@ -261,7 +261,7 @@
 							</div>
 							<div id="optional">
 								<div class="name">职业</div>
-								<div class="flex align-center multi-selection">
+								<div class="flex align-center multi-selection" id="mRoleQuery">
 									<div class="tag" onclick="toggleMulti(this)">
 										战士
 									</div>
@@ -279,7 +279,7 @@
 									</div>
 								</div>
 								<div class="name">性别</div>
-								<div class="flex align-center multi-selection">
+								<div class="flex align-center multi-selection" id="mGenderQuery">
 									<div class="tag" onclick="toggleSingle(this,'tag')">
 										男
 									</div>
@@ -288,7 +288,7 @@
 									</div>
 								</div>
 								<div class="name">等级区间(级)</div>
-								<div class="flex-b align-center price-box-wrapper">
+								<div class="flex-b align-center price-box-wrapper" id="mLevelQuery">
 									<div class="price-item">
 										<input type="number" placeholder="自定最低等级" />
 									</div>
@@ -299,7 +299,7 @@
 								</div>
 							</div>
 							<div class="name">价格区间(元)</div>
-							<div class="flex-b align-center price-box-wrapper">
+							<div class="flex-b align-center price-box-wrapper" id="mPriceQuery">
 								<div class="price-item">
 									<input type="number" placeholder="自定最低价格" />
 								</div>
@@ -310,8 +310,8 @@
 							</div>
 						</div>
 						<div class="btn-group-container flex-b align-center">
-							<div class="cancel-btn">重置</div>
-							<div class="buy-btn">确定</div>
+							<div class="cancel-btn" onclick="mSubReset2()">重置</div>
+							<div class="buy-btn" onclick="mSubSearch2()">确定</div>
 						</div>
 					</div>
 				</div>
@@ -369,10 +369,10 @@
 										</div>
 									</div>
 									<div class="line"></div>
-									<input type="text" placeholder="请输入关键词" />
+									<input type="text" placeholder="请输入关键词" id="value" />
 								</div>
 								<div class="flex-e align-center">
-									<div class="search-btn flex-c align-center">
+									<div class="search-btn flex-c align-center" onclick="search()">
 										搜索
 									</div>
 								</div>
@@ -393,10 +393,10 @@
 									<div class="sub">可多选</div>
 								</div>
 								<div class="flex-e align-center">
-									<div class="reset-btn" style="margin-right: 8px">
+									<div class="reset-btn" style="margin-right: 8px" onclick="subReset()">
 										重置
 									</div>
-									<div class="search-btn">搜索</div>
+									<div class="search-btn" onclick="subSearch()">搜索</div>
 								</div>
 							</div>
 							<div class="content">
@@ -409,7 +409,8 @@
 												<div class="arrow"></div>
 											</div>
 										</div>
-										<div class="option-list hidden" style="margin-top: -34px;">
+										<!--  -->
+										<div class="option-list hidden">
 											<div class="option-item"
 												onclick="getWebOption(this.innerText,'#layerSelect1Web','#delTag1')">
 												不限游戏区
@@ -453,7 +454,7 @@
 										</div>
 										<div class="flex align-center item">
 											<div class="name">性别</div>
-											<div class="flex align-center multi-selection">
+											<div class="flex align-center multi-selection" id="singleSelection">
 												<div class="tag" onclick="toggleSingle(this,'tag')">
 													男
 												</div>
@@ -464,7 +465,7 @@
 										</div>
 										<div class="flex align-center item" id="level">
 											<div class="name">等级区间(级)</div>
-											<div class="flex-b align-center price-box-wrapper">
+											<div class="flex-b align-center price-box-wrapper" id="query4">
 												<div class="price-item">
 													<input type="number" oninput="changeNumber(this,'#delTag4','等级区间:')"
 														placeholder="自定最低等级" />
@@ -478,7 +479,7 @@
 										</div>
 									</div>
 									<div id="huobiOptional" class="hidden">
-										<div class="flex align-center item">
+										<div class="flex align-center item" id="query5">
 											<div class="name">货币类型</div>
 											<div class="flex align-center multi-selection" id="huobiSelection">
 												<div class="tag" onclick="toggleMulti(this,'#huobiSelection')">
@@ -496,7 +497,7 @@
 									</div>
 									<div class="flex align-center item" id="price">
 										<div class="name">价格区间(元)</div>
-										<div class="flex-b align-center price-box-wrapper">
+										<div class="flex-b align-center price-box-wrapper" id="query6">
 											<div class="price-item">
 												<input type="number" oninput="changeNumber(this,'#delTag5','价格区间:')"
 													placeholder="自定最低价格" />
@@ -517,6 +518,7 @@
 								<div class="del glyphicon glyphicon-remove"
 									onclick="clearDelTag(this,'#layerSelect1Web')"></div>
 							</div>
+							<!-- 职业 -->
 							<div class="del-tag hidden" id="delTag2">
 								<div id="value"></div>
 								<div class="del glyphicon glyphicon-remove"
@@ -526,7 +528,7 @@
 							<div class="del-tag hidden" id="delTag3">
 								<div id="value"></div>
 								<div class="del glyphicon glyphicon-remove"
-									onclick="clearDelTag(this,'#multiSelection')"></div>
+									onclick="clearDelTag(this,'#singleSelection')"></div>
 							</div>
 							<!-- 等级区间 -->
 							<div class="del-tag hidden" id="delTag4">
@@ -538,10 +540,11 @@
 								<div id="value"></div>
 								<div class="del glyphicon glyphicon-remove" onclick="clearDelTag(this,'#price')"></div>
 							</div>
+							<!-- 货币类型 -->
 							<div class="del-tag hidden" id="delTag6">
 								<div id="value"></div>
 								<div class="del glyphicon glyphicon-remove"
-									onclick="clearDelTag(this,'#multiSelection')"></div>
+									onclick="clearDelTag(this,'#huobiSelection')"></div>
 							</div>
 						</div>
 
@@ -825,7 +828,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="flex-c align-center pagination-box pc-flex">
+							<!-- <div class="flex-c align-center pagination-box pc-flex">
 								<div class="page-item active" onclick="togglePage(this)">1</div>
 								<div class="page-item" onclick="togglePage(this)">2</div>
 								<div class="page-item" onclick="togglePage(this)">3</div>
@@ -837,7 +840,8 @@
 								<div class="page-item pc-nav" onclick="togglePage(this)">9</div>
 								<div class="page-item pc-nav" onclick="togglePage(this)">10</div>
 								<div class="page-item" onclick="togglePage(this)">下一页 ></div>
-							</div>
+							</div> -->
+							<div id="pagercontainer"></div>
 						</div>
 					</div>
 					<div id="homeMode2" class="hidden">
@@ -1214,7 +1218,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="flex-c align-center pagination-box pc-flex">
+							<!-- <div class="flex-c align-center pagination-box pc-flex">
 								<div class="page-item active" onclick="togglePage(this)">1</div>
 								<div class="page-item" onclick="togglePage(this)">2</div>
 								<div class="page-item" onclick="togglePage(this)">3</div>
@@ -1226,7 +1230,9 @@
 								<div class="page-item pc-nav" onclick="togglePage(this)">9</div>
 								<div class="page-item pc-nav" onclick="togglePage(this)">10</div>
 								<div class="page-item" onclick="togglePage(this)">下一页 ></div>
-							</div>
+							</div> -->
+							<div id="pagercontainer"></div>
+
 						</div>
 					</div>
 				</div>
@@ -1286,7 +1292,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 		<div id="mMenu" class="hidden">
 			<div class="m-menu-layer">
@@ -1320,6 +1326,7 @@
 		<script src="./js/swiper.js"></script>
 		<script src="./js/common.js"></script>
 		<script src="./js/header.js"></script>
+		<script src="./js/pagination.js"></script>
 		<script>
 			var mode = 1;
 			window.onload = () => {
@@ -1340,6 +1347,9 @@
 				for (let i = 0; i < countList.length; i++) {
 					setCountdown(countList[i])
 				}
+				var pagercontainer = document.getElementById('pagercontainer');
+				// 1. 当前页码  2. 总页码数 3. 中间的分页项目的个数 4. 放入哪个容器
+				createPager(25, 50, 5, pagercontainer);
 			};
 
 			function toggleMode() {

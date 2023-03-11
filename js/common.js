@@ -75,14 +75,15 @@ function getWebOption(value, el, relativeEl) {
 }
 
 function toggleJueseSelect(value, el, outerEl, innerEl, innerShowFlag, huobiEl) {
-	document.querySelector(el).innerText = value;
+	if (document.querySelector(el)) {
+		document.querySelector(el).innerText = value;
+	}
+
 	clearOptions();
 	if (document.querySelector(outerEl)) {
 		document.querySelector(outerEl).classList.remove("hidden");
 		if (document.querySelector(outerEl).querySelector(innerEl)) {
 			if (innerShowFlag) {
-				console.log(1, document
-					.querySelector(huobiEl))
 				document
 					.querySelector(outerEl)
 					.querySelector(innerEl)
@@ -93,8 +94,6 @@ function toggleJueseSelect(value, el, outerEl, innerEl, innerShowFlag, huobiEl) 
 						.classList.add("hidden");
 				}
 			} else {
-				console.log(2, document
-					.querySelector(huobiEl))
 				document
 					.querySelector(outerEl)
 					.querySelector(innerEl)
@@ -106,6 +105,20 @@ function toggleJueseSelect(value, el, outerEl, innerEl, innerShowFlag, huobiEl) 
 				}
 			}
 		}
+	}
+	console.log(value)
+	if (value == '货币') {
+		// //
+		clearDelTag(document.querySelector("#delTag2").querySelector('.glyphicon-remove'), '#multiSelection')
+		// console.log("性别",query3)
+		clearDelTag(document.querySelector("#delTag3").querySelector('.glyphicon-remove'), '#singleSelection')
+		// console.log("等级区间",query4)
+		clearDelTag(document.querySelector("#delTag4").querySelector('.glyphicon-remove'), '#level')
+
+		// // 
+	} else {
+		// console.log("货币类型",query5)
+		clearDelTag(document.querySelector("#delTag6").querySelector('.glyphicon-remove'), '#huobiSelection')
 	}
 }
 // 切换ordertab
@@ -130,6 +143,7 @@ function showGameZone(flag, el) {
 }
 // 切换多选标签
 function toggleMulti(target, relativeEl) {
+	console.log(relativeEl)
 	if (target.classList.contains("active")) {
 		target.classList.remove("active");
 	} else {
@@ -144,20 +158,37 @@ function toggleMulti(target, relativeEl) {
 			}
 		}
 		if (names.length) {
-			document
-				.querySelector("#delTag2")
-				.querySelector("#value").innerText = "职业：" + names.join(",");
-			document.querySelector("#delTag2").classList.remove("hidden");
+			if (relativeEl == '#multiSelection') {
+				document
+					.querySelector("#delTag2")
+					.querySelector("#value").innerText = "职业：" + names.join(",");
+				document.querySelector("#delTag2").classList.remove("hidden");
+			} else if (relativeEl == '#huobiSelection') {
+				document
+					.querySelector("#delTag6")
+					.querySelector("#value").innerText = "货币类型：" + names.join(",");
+				document.querySelector("#delTag6").classList.remove("hidden");
+			}
+
 		} else {
-			document
-				.querySelector("#delTag2")
-				.querySelector("#value").innerText = "";
-			document.querySelector("#delTag2").classList.add("hidden");
+			if (relativeEl == '#multiSelection') {
+				document
+					.querySelector("#delTag2")
+					.querySelector("#value").innerText = "";
+				document.querySelector("#delTag2").classList.add("hidden");
+			} else if (relativeEl == '#huobiSelection') {
+				document
+					.querySelector("#delTag6")
+					.querySelector("#value").innerText = "";
+				document.querySelector("#delTag6").classList.add("hidden");
+			}
+
 		}
 	}
 }
 
-function toggleSingle(target, className, toggleOptional) {
+function toggleSingle(target, className, toggleOptional,isReset) {
+	console.log(target,toggleOptional)
 	let list = target.parentNode.querySelectorAll("." + className);
 	for (let i = 0; i < list.length; i++) {
 		list[i].classList.remove("active");
@@ -168,16 +199,17 @@ function toggleSingle(target, className, toggleOptional) {
 			target.parentNode.parentNode
 				.querySelector("#optional")
 				.classList.add("hidden");
-				if(document.querySelector('#mRoleSelect')){
-					document.querySelector('#mRoleSelect').classList.remove('hidden')
-				}
+			if (document.querySelector('#mRoleSelect')) {
+				document.querySelector('#mRoleSelect').classList.remove('hidden')
+			}
+
 		} else {
 			target.parentNode.parentNode
 				.querySelector("#optional")
 				.classList.remove("hidden");
-				if(document.querySelector('#mRoleSelect')){
-					document.querySelector('#mRoleSelect').classList.add('hidden')
-				}
+			if (document.querySelector('#mRoleSelect')) {
+				document.querySelector('#mRoleSelect').classList.add('hidden')
+			}
 		}
 	}
 	if (document
@@ -187,7 +219,11 @@ function toggleSingle(target, className, toggleOptional) {
 			.querySelector("#value").innerText = "性别：" + target.innerText;
 		document.querySelector("#delTag3").classList.remove("hidden");
 	}
-
+	if(isReset){
+		mSubReset1()
+		mSubReset2()
+	}
+	
 }
 
 function changeNumber(target, relativeEl, name) {
@@ -204,6 +240,7 @@ function changeNumber(target, relativeEl, name) {
 }
 
 function clearDelTag(target, relativeEl) {
+	console.log(target, relativeEl)
 	let parent = target && target.parentNode;
 	if (parent) {
 		parent.querySelector("#value").innerText = "";
@@ -220,7 +257,8 @@ function clearDelTag(target, relativeEl) {
 				console.log(list[i].querySelector("input"))
 				list[i].querySelector("input").value = ''
 			}
-		} else if (relativeEl === "#multiSelection") {
+		} else if (relativeEl === "#multiSelection" || relativeEl === "#huobiSelection" || relativeEl ===
+			"#singleSelection") {
 			let list = dom.querySelectorAll(".tag");
 			for (let i = 0; i < list.length; i++) {
 				list[i].classList.remove("active");
@@ -257,7 +295,7 @@ function setCountdown(target, ts = 24 * 60 * 60 * 1000 * 2.5) {
 	let timer = null
 	if (ts > 1000) {
 		timer = setInterval(() => {
-			ts-=1000
+			ts -= 1000
 			//将时间戳格式转换成年月日时分秒
 			const day = parseInt(ts / (24 * 60 * 60 * 1000))
 			var D = (day < 10 ? '0' + (day) : day + '');
@@ -299,11 +337,235 @@ function setCountdown(target, ts = 24 * 60 * 60 * 1000 * 2.5) {
 
 
 }
-function togglePage(target){
-	let list=target.parentNode.querySelectorAll('.page-item')
-	for(let i=0;i<list.length;i++){
+
+function togglePage(target) {
+	let list = target.parentNode.querySelectorAll('.page-item')
+	for (let i = 0; i < list.length; i++) {
 		list[i].classList.remove('active')
 	}
 	target.classList.add('active')
-	
+
+}
+
+function search() {
+	let searchValue = document.querySelector("#value").value
+	let search1 = document.querySelector('#select1').innerText
+	let search2 = document.querySelector('#select2').innerText
+	console.log("输入框的值", searchValue)
+	console.log("头部导航游戏区选择：", search1)
+	console.log("头部导航角色/货币选择：", search2)
+}
+
+function subReset() {
+	clearDelTag(document.querySelector("#delTag1").querySelector('.glyphicon-remove'), '#layerSelect1Web')
+	clearDelTag(document.querySelector("#delTag2").querySelector('.glyphicon-remove'), '#multiSelection')
+	clearDelTag(document.querySelector("#delTag3").querySelector('.glyphicon-remove'), '#singleSelection')
+	clearDelTag(document.querySelector("#delTag4").querySelector('.glyphicon-remove'), '#level')
+	clearDelTag(document.querySelector("#delTag5").querySelector('.glyphicon-remove'), '#price')
+	clearDelTag(document.querySelector("#delTag6").querySelector('.glyphicon-remove'), '#huobiSelection')
+
+}
+
+function subSearch() {
+	// 4,6为组合输入框
+	let query1 = document.querySelector("#layerSelect1Web").innerText
+	let _query2 = document.querySelector("#multiSelection").querySelectorAll('.tag.active')
+	let query2 = ''
+	for (let i = 0; i < _query2.length; i++) {
+
+		query2 += ',' + (_query2[i].innerText)
+	}
+	query2 = query2.replace(',', '')
+	let _query3 = document.querySelector("#singleSelection").querySelectorAll('.tag.active')
+	let query3 = ''
+	for (let i = 0; i < _query3.length; i++) {
+
+		query3 += ',' + (_query3[i].innerText)
+	}
+	query3 = query3.replace(',', '')
+	let _query5 = document.querySelector("#huobiSelection").querySelectorAll('.tag.active')
+	let query5 = ''
+	for (let i = 0; i < _query5.length; i++) {
+
+		query5 += ',' + (_query5[i].innerText)
+	}
+	query5 = query5.replace(',', '')
+	let _query4 = document.querySelector("#query4").querySelectorAll('input')
+	let _query4Arr = []
+	for (let i = 0; i < _query4.length; i++) {
+		_query4Arr.push(_query4[i].value)
+	}
+	let query4 = _query4Arr.join('-')
+	let _query6 = document.querySelector("#query6").querySelectorAll('input')
+	let _query6Arr = []
+	for (let i = 0; i < _query6.length; i++) {
+		_query6Arr.push(_query6[i].value)
+	}
+	let query6 = _query6Arr.join('-')
+	console.log("-----------搜索框参数------------")
+	console.log("游戏大区", query1)
+	console.log("职业", query2)
+	console.log("性别", query3)
+	console.log("货币类型", query5)
+	console.log("等级区间", query4)
+	console.log("价格区间", query6)
+	console.log("-----------搜索框参数------------")
+}
+
+function mSubReset1() {
+	document.querySelector('#layerSelect1').innerText = '不限游戏区'
+
+	let _query2 = document.querySelector('#mQuery1')
+	let _query2List = _query2.querySelectorAll('.tag.active')
+	for (let i = 0; i < _query2List.length; i++) {
+		_query2List[i].classList.remove('active')
+	}
+
+	let _query3 = document.querySelector('#mQuery2')
+	let _query3List = _query3.querySelectorAll('.tag.active')
+	for (let i = 0; i < _query3List.length; i++) {
+		_query3List[i].classList.remove('active')
+	}
+
+	let _query4 = document.querySelector('#mQuery3')
+	let _query4List = _query4.querySelectorAll('input')
+	for (let i = 0; i < _query4List.length; i++) {
+		_query4List[i].value = ''
+	}
+
+	let _query5 = document.querySelector('#mQuery4')
+	let _query5List = _query5.querySelectorAll('input')
+	for (let i = 0; i < _query5List.length; i++) {
+		_query5List[i].value = ''
+	}
+}
+
+function mSubSearch1() {
+	let query1 = document.querySelector('#layerSelect1').innerText
+	let _query2 = document.querySelector('#mQuery1')
+	let _query2List = _query2.querySelectorAll('.tag.active')
+	let query2List = []
+	for (let i = 0; i < _query2List.length; i++) {
+		query2List.push(_query2List[i].innerText)
+	}
+	let query2 = query2List.join(",")
+
+	let _query3 = document.querySelector('#mQuery2')
+	let _query3List = _query3.querySelectorAll('.tag.active')
+	let query3List = []
+	for (let i = 0; i < _query3List.length; i++) {
+		query3List.push(_query3List[i].innerText)
+	}
+	let query3 = query3List.join(",")
+
+	let _query4 = document.querySelector('#mQuery3')
+	let _query4List = _query4.querySelectorAll('input')
+	let query4List = []
+	for (let i = 0; i < _query4List.length; i++) {
+		query4List.push(_query4List[i].value)
+	}
+	let query4 = query4List.join("-")
+
+	let _query5 = document.querySelector('#mQuery4')
+	let _query5List = _query5.querySelectorAll('input')
+	let query5List = []
+	for (let i = 0; i < _query5List.length; i++) {
+		query5List.push(_query5List[i].value)
+	}
+	let query5 = query5List.join("-")
+	console.log("---------------移动端弹窗1---------------")
+	console.log('游戏分区', query1)
+	console.log('职业', query2)
+	console.log('性别', query3)
+	console.log('等级区间', query4)
+	console.log('价格区间', query5)
+	console.log("---------------移动端弹窗1---------------")
+}
+
+function mSubSearch2() {
+	// 游戏大区
+	let query1 = document.querySelector('#layerSelect2').innerText
+	// 货币类型
+	let _query2 = document.querySelector('#mRoleSelect')
+	let _query2List = _query2.querySelectorAll('.tag.active')
+	let query2List = []
+	for (let i = 0; i < _query2List.length; i++) {
+		query2List.push(_query2List[i].innerText)
+	}
+	let query2 = query2List.join(",")
+	// 职业
+	let _query3 = document.querySelector('#mRoleQuery')
+	let _query3List = _query3.querySelectorAll('.tag.active')
+	let query3List = []
+	for (let i = 0; i < _query3List.length; i++) {
+		query3List.push(_query3List[i].innerText)
+	}
+	let query3 = query3List.join(",")
+	// 性别
+	let _query10 = document.querySelector('#mGenderQuery')
+	let _query10List = _query10.querySelectorAll('.tag.active')
+	let query10List = []
+	for (let i = 0; i < _query10List.length; i++) {
+		query10List.push(_query10List[i].innerText)
+	}
+	let query10 = query10List.join(",")
+
+	let _query4 = document.querySelector('#mLevelQuery')
+	let _query4List = _query4.querySelectorAll('input')
+	let query4List = []
+	for (let i = 0; i < _query4List.length; i++) {
+		query4List.push(_query4List[i].value)
+	}
+	let query4 = query4List.join("-")
+
+	let _query5 = document.querySelector('#mPriceQuery')
+	let _query5List = _query5.querySelectorAll('input')
+	let query5List = []
+	for (let i = 0; i < _query5List.length; i++) {
+		query5List.push(_query5List[i].value)
+	}
+	let query5 = query5List.join("-")
+	console.log("---------------移动端弹窗2---------------")
+	console.log('游戏分区', query1)
+	console.log('货币类型', query2)
+	console.log('职业', query3)
+	console.log('性别', query10)
+	console.log('等级区间', query4)
+	console.log('价格区间', query5)
+	console.log("---------------移动端弹窗2---------------")
+}
+
+function mSubReset2() {
+	// 游戏大区
+	document.querySelector('#layerSelect2').innerText = '不限游戏区'
+	// 货币类型
+	let _query2 = document.querySelector('#mRoleSelect')
+	let _query2List = _query2.querySelectorAll('.tag.active')
+	for (let i = 0; i < _query2List.length; i++) {
+		_query2List[i].classList.remove('active')
+	}
+	// 职业
+	let _query3 = document.querySelector('#mRoleQuery')
+	let _query3List = _query3.querySelectorAll('.tag.active')
+	for (let i = 0; i < _query3List.length; i++) {
+		_query3List[i].classList.remove('active')
+	}
+	// 性别
+	let _query10 = document.querySelector('#mGenderQuery')
+	let _query10List = _query10.querySelectorAll('.tag.active')
+	for (let i = 0; i < _query10List.length; i++) {
+		_query10List[i].classList.remove('active')
+	}
+
+	let _query4 = document.querySelector('#mLevelQuery')
+	let _query4List = _query4.querySelectorAll('input')
+	for (let i = 0; i < _query4List.length; i++) {
+		_query4List[i].value = ''
+	}
+
+	let _query5 = document.querySelector('#mPriceQuery')
+	let _query5List = _query5.querySelectorAll('input')
+	for (let i = 0; i < _query5List.length; i++) {
+		_query5List[i].value = ''
+	}
 }

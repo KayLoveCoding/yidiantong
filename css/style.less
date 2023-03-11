@@ -1170,6 +1170,64 @@ input{
   padding: 8px 10px 30px;
 }
 #me{
+	#buyModal{
+		.buy-modal{
+			position: fixed;
+			width: 350px;
+			background: #FFFFFF;
+			border-radius: 12px;
+			box-sizing: border-box;
+			padding: 20px 26px;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			top: 25vh;
+			z-index: 102;
+			.name{
+				font-size: 16px;
+				font-family: PingFang SC-Medium, PingFang SC;
+				font-weight: 500;
+				color: #1A1D1E;
+			}
+			.close{
+				width: 11px;
+				height: 11px;
+				background: url(../img/close.png) no-repeat;
+				background-position: center;
+				background-size: contain;
+				cursor: pointer;
+			}
+			.form-item{
+				margin-top: 22px;
+				.select-box .select-value{
+					height: 40px;
+				}
+				.input-box{
+					height: 40px;
+					background: #F3F3F3;
+					border-radius: 4px 4px 4px 4px;
+					box-sizing: border-box;
+					padding: 0 10px;
+					input{
+						height: 40px;
+						font-size: 16px;
+					}
+				}
+			}
+			.btn-group{
+				margin-top: 30px;
+			}
+		}
+		
+		
+		@media screen and (max-width: 1200px) {
+			.buy-modal{
+				width: 350px;
+			}
+		}
+	}
+	
 	.card{
 		box-sizing: border-box;
 		padding: 15px;
@@ -1302,3 +1360,56 @@ input{
 	}
 		
 }
+
+// 
+.pagination-box{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	.page-item{
+		box-sizing: border-box;
+		padding: 6px 12px;
+		background: #FFFFFF;
+		border-radius: 6px 6px 6px 6px;
+		margin-right: 8px;
+		cursor: pointer;
+		font-size: 14px;
+		font-family: PingFang SC-Regular, PingFang SC;
+		font-weight: 400;
+		color: #1E3C72;
+	}
+	.page-item.active{
+		background: #1E3C72;
+		color: #fff;
+	}
+}
+#pagercontainer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+	text-align: center;
+	a {
+	   box-sizing: border-box;
+	   padding: 6px 12px;
+	   background: #FFFFFF;
+	   border-radius: 6px 6px 6px 6px;
+	   margin-right: 8px;
+	   cursor: pointer;
+	   font-size: 14px;
+	   font-family: PingFang SC-Regular, PingFang SC;
+	   font-weight: 400;
+	   color: #1E3C72;
+	   text-decoration: none;
+	}
+	
+	a.active {
+	    background: #1E3C72;
+	    color: #fff;
+	}
+	
+	a.disabled {
+		background: #999;
+		color: #fff;
+	    cursor: not-allowed;
+	}
+}
+
+

@@ -56,4 +56,6 @@ function toggleLayer(el, flag) {
 	} else {
 		document.querySelector(el).classList.add("hidden")
 	}
+	mSubReset1()
+	mSubReset2()
 }

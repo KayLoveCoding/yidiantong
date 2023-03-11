@@ -1652,6 +1652,15 @@ input {
   background-size: contain;
   cursor: pointer;
 }
+#mMenu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 101;
+  left: 0;
+  top: 0;
+}
 #mMenu .m-menu-layer {
   position: fixed;
   width: 100%;
@@ -1691,6 +1700,61 @@ input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 8px 10px 30px;
+}
+#me #buyModal .buy-modal {
+  position: fixed;
+  width: 350px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 26px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25vh;
+  z-index: 102;
+}
+#me #buyModal .buy-modal .name {
+  font-size: 16px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #1A1D1E;
+}
+#me #buyModal .buy-modal .close {
+  width: 11px;
+  height: 11px;
+  background: url(../img/close.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+#me #buyModal .buy-modal .form-item {
+  margin-top: 22px;
+}
+#me #buyModal .buy-modal .form-item .select-box .select-value {
+  height: 40px;
+}
+#me #buyModal .buy-modal .form-item .input-box {
+  height: 40px;
+  background: #F3F3F3;
+  border-radius: 4px 4px 4px 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+}
+#me #buyModal .buy-modal .form-item .input-box input {
+  height: 40px;
+  font-size: 16px;
+}
+#me #buyModal .buy-modal .btn-group {
+  margin-top: 30px;
+}
+@media screen and (max-width: 1200px) {
+  #me #buyModal .buy-modal {
+    width: 350px;
+  }
 }
 #me .card {
   -webkit-box-sizing: border-box;
@@ -1832,4 +1896,53 @@ input {
   border-radius: 2px 2px 2px 2px;
   margin-right: 2px;
   color: #494D50;
+}
+.pagination-box {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.pagination-box .page-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 6px 12px;
+  background: #FFFFFF;
+  border-radius: 6px 6px 6px 6px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #1E3C72;
+}
+.pagination-box .page-item.active {
+  background: #1E3C72;
+  color: #fff;
+}
+#pagercontainer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+#pagercontainer a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 6px 12px;
+  background: #FFFFFF;
+  border-radius: 6px 6px 6px 6px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: PingFang SC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #1E3C72;
+  text-decoration: none;
+}
+#pagercontainer a.active {
+  background: #1E3C72;
+  color: #fff;
+}
+#pagercontainer a.disabled {
+  background: #999;
+  color: #fff;
+  cursor: not-allowed;
 }
