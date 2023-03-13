@@ -187,8 +187,8 @@ function toggleMulti(target, relativeEl) {
 	}
 }
 
-function toggleSingle(target, className, toggleOptional,isReset) {
-	console.log(target,toggleOptional)
+function toggleSingle(target, className, toggleOptional, isReset) {
+	console.log(target, toggleOptional)
 	let list = target.parentNode.querySelectorAll("." + className);
 	for (let i = 0; i < list.length; i++) {
 		list[i].classList.remove("active");
@@ -219,11 +219,11 @@ function toggleSingle(target, className, toggleOptional,isReset) {
 			.querySelector("#value").innerText = "性别：" + target.innerText;
 		document.querySelector("#delTag3").classList.remove("hidden");
 	}
-	if(isReset){
+	if (isReset) {
 		mSubReset1()
 		mSubReset2()
 	}
-	
+
 }
 
 function changeNumber(target, relativeEl, name) {
@@ -568,4 +568,9 @@ function mSubReset2() {
 	for (let i = 0; i < _query5List.length; i++) {
 		_query5List[i].value = ''
 	}
+}
+
+function mSearchValue() {
+	let value = document.querySelector("#mSearchValue").value
+	console.log("搜索值", value)
 }
