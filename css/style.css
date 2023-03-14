@@ -1706,6 +1706,7 @@ input {
   position: absolute;
   right: 20px;
   top: 15px;
+  opacity: 1;
 }
 #mMenu .m-menu-layer .menu-list {
   margin-top: 40px;
@@ -1759,6 +1760,7 @@ input {
   background-position: center;
   background-size: contain;
   cursor: pointer;
+  opacity: 1;
 }
 #me #buyModal .buy-modal .form-item {
   margin-top: 22px;
