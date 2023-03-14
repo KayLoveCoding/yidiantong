@@ -154,6 +154,33 @@
 		.card-list{
 			grid-template-columns: 1fr;
 			.card-item{
+				.img-box{
+					height: 300px;
+					img{
+						height: 100%;
+					}
+				}
+				&:nth-child(odd){
+					margin-right: 0;
+				}
+				&:nth-child(even){
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 376px) {
+	#index{
+		.card-list{
+			grid-template-columns: 1fr;
+			.card-item{
+				.img-box{
+					height: 180px;
+					img{
+						height: 100%;
+					}
+				}
 				&:nth-child(odd){
 					margin-right: 0;
 				}
