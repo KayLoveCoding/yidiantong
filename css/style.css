@@ -1642,7 +1642,7 @@ input {
     grid-template-columns: 1fr;
   }
   #cardType .card-list .card-item .img-box {
-    height: 300px;
+    height: 280px;
   }
   #cardType .card-list .card-item .img-box img {
     height: 100%;
@@ -1654,7 +1654,7 @@ input {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 493px) {
   #cardType {
     min-width: 375px;
   }
